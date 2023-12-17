@@ -1,0 +1,14 @@
+natsort
+lmdb
+pillow
+nltk
+natsort
+fire
+tensorboard==2.9.0
+tqdm
+opencv-python
+zhconv
+setuptools==59.5.0
+protobuf==3.20.0
+synthtiger
+timm
