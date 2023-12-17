@@ -123,7 +123,7 @@ data
 
 
 ### Training
-1. Train SVTR with only one language data (LAT). For detail, check [--select_data part](https://github.com/ku21fan/CLL-STR/blob/658b2817778ff4c43e780e18527a4149b3eda84c/train.py#L532-L573) in train.py.
+1. Train SVTR with only one language data (LAT). For detail, check [--select_data part](https://github.com/ku21fan/CLL-STR/blob/e65ac0288ea41c0cba7191141b838e7ab0d1eb4f/train.py#L532-L573) in train.py.
    ```
    CUDA_VISIBLE_DEVICES=0 python3 train.py --model_name SVTR --exp_name SVTR_lang_L --select_data lang_L
    ```
