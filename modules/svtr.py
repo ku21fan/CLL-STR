@@ -126,16 +126,14 @@ class Attention(nn.Module):
         if mixer == "Local" and HW is not None:
             hk = local_k[0]
             wk = local_k[1]
-            mask = torch.ones(
-                [H * W, H + hk - 1, W + wk - 1], dtype=torch.float32
-            ).cuda()
+            mask = torch.ones([H * W, H + hk - 1, W + wk - 1], dtype=torch.float32)
             for h in range(0, H):
                 for w in range(0, W):
                     mask[h * W + w, h : h + hk, w : w + wk] = 0.0
             mask_torch = torch.flatten(
                 mask[:, hk // 2 : H + hk // 2, wk // 2 : W + wk // 2], 1
             )
-            mask_inf = torch.full([H * W, H * W], -np.inf, dtype=torch.float32).cuda()
+            mask_inf = torch.full([H * W, H * W], -np.inf, dtype=torch.float32)
             mask = torch.where(mask_torch < 1, mask_torch, mask_inf)
             self.mask = mask.unsqueeze(0)
             self.mask = self.mask.unsqueeze(0)
