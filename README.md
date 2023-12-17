@@ -96,7 +96,7 @@ data
     └── LAT
 ```
 
-<h3 id="pretrained_models"> Run demo with pretrained model <a href="https://colab.research.google.com/github/ku21fan/CLL-STR/blob/master/demo_in_colab.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> </h3>
+<h3 id="pretrained_models"> Run demo with pretrained model <a href="https://colab.research.google.com/github/ku21fan/CLL-STR/blob/main/demo_in_colab.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> </h3>
 
 1. [Download pretrained model](https://www.dropbox.com/scl/fo/uip1fanfsgu2yxerfofv6/h?rlkey=sd93rztv4gfwmmg7ukzrho0e1&dl=0) <br>
    For example, download [SVTR_joint_All.pth](https://www.dropbox.com/scl/fi/q9r2ebbnr94xv4azyl7o1/SVTR_joint_All.pth?rlkey=wsonhqkffwyb4jixva44p0s5y&dl=0) for demo.
