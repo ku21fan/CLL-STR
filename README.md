@@ -1,5 +1,5 @@
 # Cross-Lingual Learning in Multilingual Scene Text Recognition
-Official PyTorch implementation | [paper]() | [training and evaluation data](#download-preprocessed-lmdb-datasets-for-training-and-evaluation) | [pretrained model](#pretrained_models) | <br>
+Official PyTorch implementation | [paper](https://arxiv.org/abs/2312.10806) | [training and evaluation data](#download-preprocessed-lmdb-datasets-for-training-and-evaluation) | [pretrained model](#pretrained_models) | <br>
 Authors &emsp;&emsp; [Jeonghun Baek](https://jeonghunbaek.net/), [Yusuke Matusi](http://yusukematsui.me/), [Kiyoharu Aizawa](http://www.hal.t.u-tokyo.ac.jp/~aizawa/) <br> 
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;The University of Tokyo
 
