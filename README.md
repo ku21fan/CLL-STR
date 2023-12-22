@@ -50,6 +50,32 @@ pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --e
 pip install -r requirements.txt
 ```
 
+<h3 id="pretrained_models"> Run demo with pretrained model <a href="https://colab.research.google.com/github/ku21fan/CLL-STR/blob/main/colab_demo.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> </h3>
+
+1. [Download pretrained model](https://www.dropbox.com/scl/fo/uip1fanfsgu2yxerfofv6/h?rlkey=sd93rztv4gfwmmg7ukzrho0e1&dl=0) <br>
+   For example, download [SVTR_joint_All.pth](https://www.dropbox.com/scl/fi/q9r2ebbnr94xv4azyl7o1/SVTR_joint_All.pth?rlkey=wsonhqkffwyb4jixva44p0s5y&dl=0) for demo.
+   ```
+   wget -O SVTR_joint_All.pth https://www.dropbox.com/scl/fi/q9r2ebbnr94xv4azyl7o1/SVTR_joint_All.pth?rlkey=wsonhqkffwyb4jixva44p0s5y
+   ```
+2. Add image files to test into `demo_image/`
+3. Run demo.py
+   ```
+   CUDA_VISIBLE_DEVICES=0 python3 demo.py --model_name SVTR --image_folder demo_image/ \
+   --saved_model SVTR_joint_All.pth
+   ```
+
+#### Prediction on demo images
+   | demo images | [SVTR_joint_All_but_LAT](https://www.dropbox.com/scl/fi/vh7hadt745e0bkvx3ihzb/SVTR_joint_All_but_LAT.pth?rlkey=756sc51vvp23xl6yh5zx2edmu&dl=0) | [SVTR_joint_All](https://www.dropbox.com/scl/fi/q9r2ebbnr94xv4azyl7o1/SVTR_joint_All.pth?rlkey=wsonhqkffwyb4jixva44p0s5y&dl=0) | Ground Truth |
+   | ---         |     ---      |     ---      |          --- |
+   | <img src="./demo_image/ARA.jpg" width="300" height="100">    |   اﻟﺤﻢ       | اﻟﺒﺎب     |  الباب   |
+   | <img src="./demo_image/BEN.jpg" width="300" height="100">    |   বান       | রাখিবেন   | রাখিবেন |
+   | <img src="./demo_image/CHI.jpg" width="300" height="100">    |   か本       | 北京西    | 北京西 |
+   | <img src="./demo_image/HIN.jpg" width="300" height="100">    |   ज        | मंडप      | मंडप |
+   | <img src="./demo_image/JPN.jpg" width="300" height="100">    |   ٥り     | くすり      | くすり |
+   | <img src="./demo_image/KOR.jpg" width="300" height="100">    |   상온     | 냉면은    | 냉면은 |
+   | <img src="./demo_image/LAT.jpg" width="300" height="100">    |   디센다   | CUISINE   | CUISINE |
+
+
 ### Download preprocessed lmdb datasets for training and evaluation
 We use [MLT19](https://rrc.cvc.uab.es/?ch=15&com=introduction) and [SynthMLT](https://github.com/MichalBusta/E2E-MLT) datasets.
 MLT19 and SynthMLT consist of 7 scripts: Arabic (ARA), Bengali (BEN), Chinese (CHI), Hindi (HIN), Japanese (JPN), Korean (KOR), and Latin (LAT). 
@@ -95,32 +121,6 @@ data
     ├── KOR
     └── LAT
 ```
-
-<h3 id="pretrained_models"> Run demo with pretrained model <a href="https://colab.research.google.com/github/ku21fan/CLL-STR/blob/main/colab_demo.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> </h3>
-
-1. [Download pretrained model](https://www.dropbox.com/scl/fo/uip1fanfsgu2yxerfofv6/h?rlkey=sd93rztv4gfwmmg7ukzrho0e1&dl=0) <br>
-   For example, download [SVTR_joint_All.pth](https://www.dropbox.com/scl/fi/q9r2ebbnr94xv4azyl7o1/SVTR_joint_All.pth?rlkey=wsonhqkffwyb4jixva44p0s5y&dl=0) for demo.
-   ```
-   wget -O SVTR_joint_All.pth https://www.dropbox.com/scl/fi/q9r2ebbnr94xv4azyl7o1/SVTR_joint_All.pth?rlkey=wsonhqkffwyb4jixva44p0s5y
-   ```
-2. Add image files to test into `demo_image/`
-3. Run demo.py
-   ```
-   CUDA_VISIBLE_DEVICES=0 python3 demo.py --model_name SVTR --image_folder demo_image/ \
-   --saved_model SVTR_joint_All.pth
-   ```
-
-#### Prediction on demo images
-   | demo images | [SVTR_joint_All_but_LAT](https://www.dropbox.com/scl/fi/vh7hadt745e0bkvx3ihzb/SVTR_joint_All_but_LAT.pth?rlkey=756sc51vvp23xl6yh5zx2edmu&dl=0) | [SVTR_joint_All](https://www.dropbox.com/scl/fi/q9r2ebbnr94xv4azyl7o1/SVTR_joint_All.pth?rlkey=wsonhqkffwyb4jixva44p0s5y&dl=0) | Ground Truth |
-   | ---         |     ---      |     ---      |          --- |
-   | <img src="./demo_image/ARA.jpg" width="300" height="100">    |   اﻟﺤﻢ       | اﻟﺒﺎب     |  الباب   |
-   | <img src="./demo_image/BEN.jpg" width="300" height="100">    |   বান       | রাখিবেন   | রাখিবেন |
-   | <img src="./demo_image/CHI.jpg" width="300" height="100">    |   か本       | 北京西    | 北京西 |
-   | <img src="./demo_image/HIN.jpg" width="300" height="100">    |   ज        | मंडप      | मंडप |
-   | <img src="./demo_image/JPN.jpg" width="300" height="100">    |   ٥り     | くすり      | くすり |
-   | <img src="./demo_image/KOR.jpg" width="300" height="100">    |   상온     | 냉면은    | 냉면은 |
-   | <img src="./demo_image/LAT.jpg" width="300" height="100">    |   디센다   | CUISINE   | CUISINE |
-
 
 ### Training
 1. Train SVTR with only one language data (LAT). For detail, check [--select_data part](https://github.com/ku21fan/CLL-STR/blob/e65ac0288ea41c0cba7191141b838e7ab0d1eb4f/train.py#L532-L573) in train.py.
