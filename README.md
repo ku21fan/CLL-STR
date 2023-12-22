@@ -3,7 +3,7 @@ Official PyTorch implementation | [paper](https://arxiv.org/abs/2312.10806) | [t
 Authors &emsp;&emsp; [Jeonghun Baek](https://jeonghunbaek.net/), [Yusuke Matusi](http://yusukematsui.me/), [Kiyoharu Aizawa](http://www.hal.t.u-tokyo.ac.jp/~aizawa/) <br> 
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;The University of Tokyo
 
-**Summary**: We show that $\textcolor{red}{\textsf{cross-lingual learning (CLL) is simple and highly effective for improving performance in low-resource languages.}}$   When recognizing visual text from the low-resource language, use the high-resource language together for better performance.
+**Summary**: We show $\textcolor{red}{\textsf{cross-lingual learning (CLL) is simple and highly effective for improving performance in low-resource languages.}}$   When recognizing visual text from the low-resource language, use the high-resource language together for better performance.
 1. In this work, we investigate **CLL for multilingual scene text recognition (STR).** <br>
 CLL transfers knowledge from one language to another.
 Often, the number of resources in each language is not even.
