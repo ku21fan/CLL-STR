@@ -11,7 +11,7 @@ In this case, **instead of obtaining more resources, applying CLL from an existi
 
 <p align="center">
    <img src="figures/CLL.jpg" width="70%"><br>
-   <em>Scene text recognition in a low-resource language, Korean (KOR). (a) Monolingual training on KOR results in incorrect predictions, whereas (b) CLL from a high-resource language English (ENG) to KOR leads to correct predictions.</em>
+   <em> (a) Monolingual training on KOR results in incorrect predictions, whereas (b) CLL from a high-resource language English (ENG) to KOR leads to correct predictions.</em>
 </p>
 
 
