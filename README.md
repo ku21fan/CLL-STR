@@ -1,7 +1,5 @@
 # Cross-Lingual Learning in Multilingual Scene Text Recognition
 Official PyTorch implementation | [paper](https://arxiv.org/abs/2312.10806) | [training and evaluation data](#download-preprocessed-lmdb-datasets-for-training-and-evaluation) | [pretrained model](#pretrained_models) | <br>
-Authors &emsp;&emsp; [Jeonghun Baek](https://jeonghunbaek.net/), [Yusuke Matusi](http://yusukematsui.me/), [Kiyoharu Aizawa](http://www.hal.t.u-tokyo.ac.jp/~aizawa/) <br> 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;The University of Tokyo
 
 **Summary**: $\textcolor{red}{\textsf{Cross-lingual learning (CLL) is simple and highly effective for improving performance in low-resource languages.}}$   When recognizing visual text from the low-resource language, use the high-resource language together for better performance.
 1. In this work, we investigate **CLL for multilingual scene text recognition (STR).** <br>
