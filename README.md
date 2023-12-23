@@ -17,11 +17,11 @@ In this case, **instead of obtaining more resources, applying CLL from an existi
 
 2. **We aim to find the condition where CLL works well.**
 To do so, we first **verify two general insights about CLL discussed in previous works ([MRN](https://github.com/simplify23/MRN) and [M-BRET](https://arxiv.org/abs/1906.01502))**:
-(1) joint learning with high- and low-resource languages may reduce performance on low-resource languages, and (2) CLL works best between similar languages.
+(a) joint learning with high- and low-resource languages may reduce performance on low-resource languages, and (b) CLL works best between similar languages.
 By using a representative multilingual scene text dataset [MLT19](https://rrc.cvc.uab.es/?ch=15&com=introduction), **we show that the two general insights may not be applied to multilingual STR.**
 <p align="center">
    <img src="figures/insights.jpg" width="70%"><br>
-   <em> We investigate two general insights about CLL related to (a) joint learning and (b) cascade learning (CL). </em>
+   <em> Two general insights about CLL related to (a) joint learning and (b) cascade learning (CL). </em>
 </p>
 
 
