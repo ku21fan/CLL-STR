@@ -44,6 +44,8 @@ Install conda >= 4.11.0  (python >= 3.8) and then run the following commands. <b
 conda create -n CLL python=3.8 -y
 conda activate CLL
 
+git clone https://github.com/ku21fan/CLL-STR.git
+cd ./CLL-STR
 pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
 pip install -r requirements.txt
 ```
