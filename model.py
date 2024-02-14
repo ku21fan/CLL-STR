@@ -90,7 +90,6 @@ class Model(nn.Module):
 
         """ Feature extraction stage """
         visual_feature = self.FeatureExtraction(image)
-        # print("1", visual_feature.size())
         visual_feature = visual_feature.permute(
             0, 3, 1, 2
         )  # [b, c, h, w] -> [b, w, c, h]
@@ -98,8 +97,7 @@ class Model(nn.Module):
             visual_feature
         )  # [b, w, c, h] -> [b, w, c, 1]
         visual_feature = visual_feature.squeeze(3)  # [b, w, c, 1] -> [b, w, c]
-        # print("2", visual_feature.size())
-
+        
         """ Sequence modeling stage """
         if self.stages["Seq"] == "BiLSTM":
             contextual_feature = self.SequenceModeling(
