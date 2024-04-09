@@ -6,9 +6,9 @@ Official PyTorch implementation | [paper](https://arxiv.org/abs/2312.10806) | [t
 2. Cross-Lingual Learning (CLL): A methodology for transferring knowledge from one language to another.
 
 **What we did:**
-1. Verified two general insights about CLL and showed that **the two general insights may not be applied to multilingual STR.**
-2. Showed that **CLL is simple and highly effective for improving performance in low-resource languages.**
-3. Found the condition where CLL works well: **the crucial condition for CLL is the dataset size of high-resource languages, regardless of the kind of high-resource languages.**
+1. Verified two general insights about CLL and showed that _the two general insights may not be applied to multilingual STR._
+2. Showed that _CLL is simple and highly effective for improving performance in low-resource languages._
+3. Found the condition where CLL works well: _the crucial condition for CLL is the dataset size of high-resource languages, regardless of the kind of high-resource languages._
 
 **More detail:**
 1. In this work, we investigate **CLL for multilingual scene text recognition (STR).** <br>
