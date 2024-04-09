@@ -1,7 +1,16 @@
 # Cross-Lingual Learning in Multilingual Scene Text Recognition
 Official PyTorch implementation | [paper](https://arxiv.org/abs/2312.10806) | [training and evaluation data](#download-preprocessed-lmdb-datasets-for-training-and-evaluation) | [pretrained model](#pretrained_models) | <br>
 
-**Summary**: $\textcolor{red}{\textsf{Cross-lingual learning (CLL) is simple and highly effective for improving performance in low-resource languages.}}$   When recognizing visual text from the low-resource language, use the high-resource language together for better performance.
+**Preliminaries:** 
+1. Multilingual STR: A task to recognize text from multiple languages in a word- or line-level scene image.
+2. Cross-Lingual Learning (CLL): A methodology for transferring knowledge from one language to another.
+
+**What we did:**
+1. Verified two general insights about CLL and showed that **the two general insights may not be applied to multilingual STR.**
+2. Showed that **CLL is simple and highly effective for improving performance in low-resource languages.**
+3. Found the condition where CLL works well: **the crucial condition for CLL is the dataset size of high-resource languages, regardless of the kind of high-resource languages.**
+
+**More detail:**
 1. In this work, we investigate **CLL for multilingual scene text recognition (STR).** <br>
 CLL transfers knowledge from one language to another.
 Often, the number of resources in each language is not even.
@@ -11,23 +20,23 @@ In this case, **instead of obtaining more resources, applying CLL from an existi
 
 <p align="center">
    <img src="figures/CLL.jpg" width="70%"><br>
-   <em> (a) Monolingual training on KOR results in incorrect predictions, whereas (b) CLL from a high-resource language English (ENG) to KOR leads to correct predictions.</em>
+   <em> (a) Monolingual training on a low-resource language Korean (KOR) results in incorrect predictions, whereas (b) CLL from a high-resource language English (ENG) to KOR leads to correct predictions.</em>
 </p>
 
 
 2. **We aim to find the condition where CLL works well.**
 To do so, we first **verify two general insights about CLL discussed in previous works ([MRN](https://github.com/simplify23/MRN) and [M-BRET](https://arxiv.org/abs/1906.01502))**:
 (a) joint learning with high- and low-resource languages may reduce performance on low-resource languages, and (b) CLL works best between similar languages.
-By using a representative multilingual scene text dataset [MLT19](https://rrc.cvc.uab.es/?ch=15&com=introduction), **we show that the two general insights may not be applied to multilingual STR.**
+By using a representative multilingual scene text dataset [MLT19](https://rrc.cvc.uab.es/?ch=15&com=introduction), we show that **the two general insights may not be applied to multilingual STR.**
 <p align="center">
    <img src="figures/insights.jpg" width="70%"><br>
    <em> Two general insights about CLL related to (a) joint learning and (b) cascade learning (CL). </em>
 </p>
 
 
-3. After that, through extensive experiments, we empirically show that **the crucial factor is the number of samples in high-resource languages rather than the similarity between languages.**
+3. After that, through extensive experiments with additional data [SynthMLT](https://github.com/MichalBusta/E2E-MLT), we empirically show that **the crucial factor is the number of samples in high-resource languages rather than the similarity between languages.**
 In other words, CLL works well when we have sufficiently large samples in high-resource languages regardless of the kind of high-resource languages.
-**We assume this is because the essential knowledge of STR is distinguishing text in the image and can be learned from any language.**
+We assume this is because **the essential knowledge of STR is distinguishing text in the image and can be learned from any language.**
 
 We hope this work helps get more insights into multilingual STR.
 
@@ -65,6 +74,7 @@ pip install -r requirements.txt
    ```
 
 #### Prediction on demo images
+Here, LAT is considered a high-resource language (28K) compared to other languages. The results below show the effectiveness of CLL.
    | demo images | [SVTR_joint_All_but_LAT](https://www.dropbox.com/scl/fi/vh7hadt745e0bkvx3ihzb/SVTR_joint_All_but_LAT.pth?rlkey=756sc51vvp23xl6yh5zx2edmu&dl=0) | [SVTR_joint_All](https://www.dropbox.com/scl/fi/q9r2ebbnr94xv4azyl7o1/SVTR_joint_All.pth?rlkey=wsonhqkffwyb4jixva44p0s5y&dl=0) | Ground Truth |
    | ---         |     ---      |     ---      |          --- |
    | <img src="./demo_image/ARA.jpg" width="300" height="100">    |   اﻟﺤﻢ       | اﻟﺒﺎب     |  الباب   |
