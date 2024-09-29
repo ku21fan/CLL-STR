@@ -197,7 +197,7 @@ demo.py
 ## Citation
 Please consider citing this work in your publications if it helps your research.
 ```
-@inproceedings{baek2023CLLSTR,
+@inproceedings{baek2024CLLSTR,
   title={Cross-Lingual Learning in Multilingual Scene Text Recognition},
   author={Baek, Jeonghun and Matsui, Yusuke and Aizawa, Kiyoharu},
   booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
